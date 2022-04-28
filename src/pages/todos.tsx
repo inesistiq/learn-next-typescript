@@ -1,16 +1,12 @@
 import {useState} from 'react'
-import TodoList from '../component/Todo'
-import TodoForm from '../component/TodoForm'
+import TodoList from '../container/Todo'
+import TodoForm from '../container/TodoForm'
 import { Todo } from '../types.d'
 
 const todo: Todo[] = [
-    {
+      {
         event: "Learning ts",
         complete: true,
-      },
-      {
-        event: "Confused with ts",
-        complete: false,
       },
 ]
 
