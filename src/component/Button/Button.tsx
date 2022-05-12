@@ -1,7 +1,6 @@
 import React, { FC, HTMLAttributes } from "react";
 
 export interface ButtonProp extends HTMLAttributes<HTMLElement>{
-    primary?: boolean
     backgroundColor?: string
     size?: 'small' | 'medium' | 'large';
     type?: 'submit' | 'button'
@@ -11,7 +10,6 @@ export interface ButtonProp extends HTMLAttributes<HTMLElement>{
 }
 
 export const Button: FC<ButtonProp> = ({
-    primary = false,
     size = 'medium',
     backgroundColor,
     color,
@@ -21,11 +19,10 @@ export const Button: FC<ButtonProp> = ({
     classes,
     ...props
 }: ButtonProp) => {
-    const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary'
     return(
         <button
         type={type}
-        className={[classes, 'storybook-button', `storybook-button--${size}`, mode].join(' ')}
+        className={[classes, 'storybook-button', `storybook-button--${size}`].join(' ')}
         style={{backgroundColor, color}}
         onClick={onClick}
         {...props}

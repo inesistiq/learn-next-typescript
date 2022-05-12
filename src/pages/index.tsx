@@ -63,6 +63,12 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
+
+      <div>
+          <button type="button" className=" bg-blue-500 ">
+            Test
+          </button>
+        </div>
     
 
       <footer className="container flex justify-center">
